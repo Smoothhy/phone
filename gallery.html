@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-style: Verdana;
+        }
+        body{
+            
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            height: 99vh;
+            padding: 1rem;
+        }
+        section{
+            height: 100%;
+            width: 23.5rem;
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows:  repeat(4, 1fr);
+        }
+        h1{
+            font-weight: bold;
+        }
+        .closed{
+            cursor: pointer;
+            position: relative;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+        }
+        .closed:hover{
+            border: 1px solid rgb(129, 0, 129);
+        }
+        .closed::after{
+            content: attr(datatooltip);
+            display: block;
+            position: absolute;
+            color: white;
+            bottom: -30.5px;
+            left: 30.5px;
+        }
+    
+    .open{
+        display: none;
+        position: absolute;
+        z-index: 999;
+        width: 23.5rem;
+    }
+    .open img{
+        width: 80px;
+        height: 80px;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    .open img:hover{
+        width: 85px;
+        height: 85px;
+        border: 1px solid rgb(129, 0, 129);
+    }
+
+    .dialog{
+    z-index: 99999999999999999999999;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    backdrop-filter: blur(5px);
+    background: rgba(0,0,0,.5);
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 5rem;
+    }
+    .dialog img{
+        max-width: 100%;
+        max-height: 100%;
+        width: initial;
+        height: initial;
+    }
+    .dialog .closeDialog{
+        background-color: black;
+        color: white;
+        border: none;
+        font-size: 200%;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    .arrow{
+        position: relative;
+        width: 20px;
+        height: 15px;
+        cursor: pointer;
+        left: 11.5rem;
+        bottom: -1.5rem;
+    }
+    .arrow::before{
+        position: absolute;
+        /* transform: rotate(-90deg); */
+        content: '';
+        
+        margin-left: -15px;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid white;
+            
+        }
+    @keyframes arrow{
+        0% {bottom: 0rem}
+        50% {bottom: -1rem}
+        100% {bottom: 0rem}
+    }
+    .arrow:hover::before{
+        animation-name: arrow;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function:linear;            
+        animation-direction: alternate-reverse;
+    }
+    .second{
+            display: none;
+            height: 100%;
+            width: 20rem;
+            color: white;
+            text-align: center;
+        }
+        .go-back{
+            width: 10rem;
+            height: 3rem;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+    
+    <h1 class="albumName">Albums</h1>
+    <section>
+        <div class="albumUs closed" datatooltip="Us :>">
+        </div>
+        <div class="open">
+            <img class="image" src="img/gallery/403fb74a-dfb7-47e0-a920-4dee86b7a912photo.jpeg" alt="">
+            <img class="image" src="img/gallery/5d6974ab-847d-4f90-bd1c-c8e8cd7447a9photo.jpeg" alt="">
+            <img class="image" src="img/gallery/IMG_20240409_154422.jpg" alt="">
+            <img class="image" src="img/gallery/IMG_20240409_154433.jpg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_05bce7cc-5338-4f5f-925f-e6f608677916.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_16c22459-4e4b-4b77-8897-b6cef7f94bbc.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_1c02b6be-3847-4a1f-be5a-e0a347545749.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_25405782-2acc-42de-a514-ecf9d78f3c84.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_324fe184-4f62-4782-be6e-3f7ccb29313b.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_5bf6552d-4041-4499-8153-82b54abb4049.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_64604408-ff36-444a-8f82-f3f1593aee91.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_6a27033d-c61a-4260-9dab-627be7752ef4.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_70a9a0e9-1a1f-432d-bc9d-82d961ad46a4.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_7a61e876-116f-4403-aafe-e8415e7585bc.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_85dc8049-f601-4e0c-b578-2a71c243c794.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_aaf12d6c-1a26-4d95-8be9-1ead5cbf4dc4.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_af640ee0-a354-49ab-a816-f4c310e87b54.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_cec9fee3-f326-474a-b711-f98a1d1f5382.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_e71d11b6-61ab-4c0b-a956-88c9f5abc986.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_eae3f1ab-c4ef-4088-a719-304646bfb3ab.jpeg" alt="">
+            <img class="image" src="img/gallery/Messenger_creation_f5de5d4e-091b-4c8c-b386-00848d991b9c.jpeg" alt="">
+            <img class="image" src="img/gallery/Screenshot_2024-04-15-07-51-04-982_com.facebook.orca.jpg" alt="">
+            <img class="image" src="img/gallery/Screenshot_2024-04-15-07-50-47-275_com.facebook.orca.jpg" alt="">
+            <img class="image" src="img/gallery/Screenshot_2024-04-15-07-51-00-485_com.facebook.orca.jpg" alt="">
+
+            <a class="arrow"></a>
+        </div>
+        <div class="second">
+            <p>Yes, thats the gallery of us. I hope you checked some photos.</p>
+            <p>
+                Here's the code: 9383
+            </p> 
+            <button class="go-back">Go back</button>
+        </div>
+    </section>
+    <div class="dialog">
+    </div>
+</main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(".albumUs").click(function() {
+            $(".albumUs").hide();
+            $(".open").show();
+            $(".albumName").text("Us :>");
+            $(".open").css({
+                "display": "grid",
+                "grid-template-columns": "repeat(4, 1fr)",
+                "gap": "10px"
+            })
+            
+        })
+        const dialog = $(".dialog");
+        
+        
+        $(".image").click(function() {
+            let src = $(this).attr("src");
+            console.log(src);
+            dialog.css({
+                "display":"flex",
+                "flex-direction": "column",
+                "justify-content":"center",
+                "align-items":"center",
+            });
+            dialog.append("<button class='closeDialog'>X</button>");
+            dialog.append(`<img src= '${src}'>`);
+            $(".closeDialog").click(function(){
+            dialog.css(
+                "display", "none"
+            );
+            dialog.empty()
+        })
+        
+        })
+
+        $(".arrow").click(function(){
+            $(".open").slideUp(500);
+            $(".second").delay(500).slideDown();
+        })
+        $(".go-back").click(function(){
+            window.location.href = 'phone.html';
+
+        })
+        
+    </script>
+</body>
+</html>

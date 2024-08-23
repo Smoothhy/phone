@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to nadal normalny telefon.</title>
+    <link rel="stylesheet" href="style-phone.css">
+</head>
+<body>
+   <main>
+    <a href="clicker.html" datatooltip="Clicker" id="clicker">
+        <img src="img/heart-organ.svg" alt="">
+    </a>
+    <button datatooltip="Gallery" id="gallery">
+        <img src="img/photo-camera.svg" alt="">
+    </button>
+    <button  datatooltip="Spotify" id="spotify">
+        <img src="img/music-spell.svg" alt="">
+    </button>
+   </main>
+   <dialog class="dialog">
+    <div>
+        <h1>Enter PIN</h1>
+        <div class="result">_ _ _ _</div>
+        <div class="btns">
+            <button class="num" id="one" value="1">1</button>
+            <button class="num" id="two" value="2">2</button>
+            <button class="num" id="three" value="3">3</button>
+            <button class="num" id="four" value="4">4</button>
+            <button class="num" id="five" value="5">5</button>
+            <button class="num" id="six" value="6">6</button>
+            <button class="num" id="seven" value="7">7</button>
+            <button class="num" id="eight" value="8">8</button>
+            <button class="num" id="nine" value="9">9</button>
+            <button class="num" id="zero" value="0">0</button>
+        </div>
+    </div>
+   </dialog>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script>
+    let pin;
+    const dialog = $(".dialog");
+    $("#gallery").click(function(){ 
+        pin = 3369;
+        dialog.show();
+        dialog.css({
+        "display":"flex",
+        "flex-direction": "column",
+        "justify-content":"center",
+        "align-items":"center"
+    })
+})
+
+let lengthResult = 0;
+    $(".num").each(function(index){
+        
+        $(this).click(function() {
+            if($(".result").text() == "Wrong PIN, try again." ||$(".result").text() == "_ _ _ _"){
+                $(".result").empty();
+            }
+            if(lengthResult <= 3){
+                $(".result").append($(this).val());
+                lengthResult++;
+                if($(".result").text() == pin){
+                    
+                    window.location = 'gallery.html';
+                }
+            }
+            else{
+                $(".result").text("Wrong PIN, try again.");
+                lengthResult = 0;
+            }})
+        })
+    </script>
+</body>
+</html>

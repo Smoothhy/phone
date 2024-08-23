@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-style: Verdana;
+            overflow: hidden;
+        }
+        body{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            font-size: 150%;
+        }
+        body div img{
+            width: 300px;
+            height: 300px;
+        }
+
+        button, img{
+            cursor: pointer;
+        }
+
+        .first{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .second{
+            display: none;
+            height: 100%;
+            width: 20rem;
+        }
+        .second button{
+            width: 5rem;
+            height: 3rem;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+        }
+        .go-back{
+            display: none;
+            width: 10rem;
+            height: 3rem;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="first">
+        <h1>Click.</h1>
+        <div> <img src="img/heart-organ.png" alt="" id="heart"></div>
+        <p><span id="current">1</span> / 100</p>
+    </section>
+    <section class="second">
+        <p>Hey love, congratulations, you've just clicked 100 times on a heart. That's my love for you, but like 1000000 bigger. I love you.</p>
+        <div>
+            <button id="correct">I love you too.</button>
+            <button id="wrong">No, fuck you.</button>
+
+        </div>
+    </section>
+    <button class="go-back">Go back</button>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script-clicker.js"></script>
+</body>
+</html>

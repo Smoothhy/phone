@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: Verdana;
+    overflow: hidden;
+}
+body{
+    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url("img/tapeta-blokada.jpg");
+    background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+header{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 160%;
+}
+main{
+    display: none;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    gap: 1rem;
+}
+
+    .btns{
+        width: 10rem;
+        height: 15rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: .25rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:  repeat(4, 1fr);
+    }
+    .btns #zero{
+        grid-column-start: 2;
+    }
+    .num{
+        border-radius: 4px;
+        padding: .75rem 1.5rem .75rem 1.5rem;
+        background-color: rgba(0,0,0,.4);
+        color: white;
+    }
+
+footer{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 120%;
+}
