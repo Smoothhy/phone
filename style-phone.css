@@ -20,7 +20,7 @@ main{
     background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    width: 23.5rem;
+    width: 25rem;
     display: grid;
     padding: 4rem 1.25rem 1.25rem 1.25rem;
     gap: 1.25rem;

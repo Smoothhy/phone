@@ -50,7 +50,18 @@
         "justify-content":"center",
         "align-items":"center"
     })
-})
+    })
+    $("#spotify").click(function(){ 
+            pin = 9383;
+            dialog.show();
+            dialog.css({
+            "display":"flex",
+            "flex-direction": "column",
+            "justify-content":"center",
+            "align-items":"center"
+        })
+    })
+    
 
 let lengthResult = 0;
     $(".num").each(function(index){
@@ -62,9 +73,11 @@ let lengthResult = 0;
             if(lengthResult <= 3){
                 $(".result").append($(this).val());
                 lengthResult++;
-                if($(".result").text() == pin){
+                if($(".result").text() == pin && pin == 3369){
                     
                     window.location = 'gallery.html';
+                }else if($(".result").text() == pin && pin == 9383){
+                    window.location = 'spotify.html';
                 }
             }
             else{
