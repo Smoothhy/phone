@@ -78,46 +78,46 @@
         <h1>Spotify</h1>
 
         <ul class="playlist">
-            <li id="one"><img src="" alt=""> <h3>Długość dźwięku samotności</h3> <button id="audioOne">▶</button></li>
+            <li id="one"><img alt=""> <h3>Długość dźwięku samotności</h3> <button id="audioOne">▶</button></li>
                         <audio  id="audioOnePlay">
                             <source src="audios/Myslovitz - Długość dźwięku samotności (Lyric Video).mp3">
                         </audio>
-            <li id="two"><img src="" alt=""> <h3>Następna stacja</h3> <button id="audioTwo">▶</button></li>
+            <li id="two"><img alt=""> <h3>Następna stacja</h3> <button id="audioTwo">▶</button></li>
                         <audio  id="audioTwoPlay">
                             <source src="audios/Taco Hemingway - Następna stacja (prod. Rumak).mp3">
                         </audio>
-            <li id="three"><img src="" alt=""> <h3>Koń na białym rycerzu</h3> <button id="audioThree">▶</button></li>
+            <li id="three"><img alt=""> <h3>Koń na białym rycerzu</h3> <button id="audioThree">▶</button></li>
                         <audio src="audios/Nocny Kochanek - Koń na Białym Rycerzu (Oficjalny Teledysk).mp3" id="audioThreePlay"></audio>
-            <li id="four"><img src="" alt=""> <h3>Good Luck, Babe!</h3> <button id="audioFour">▶</button></li>
+            <li id="four"><img alt=""> <h3>Good Luck, Babe!</h3> <button id="audioFour">▶</button></li>
                         <audio src="audios/Chappell Roan - Good Luck, Babe (Official Lyric Video).mp3" id="audioFourPlay"></audio>
-            <li><img src="" alt=""> <h3>Dla Ciebie</h3> <button id="audioFive">▶</button></li>
+            <li id="five"><img alt=""> <h3>Dla Ciebie</h3> <button id="audioFive">▶</button></li>
                         <audio src="audios/Dla Ciebie.mp3" id="audioFivePlay"></audio>
-            <li><img src="" alt=""> <h3>Patolove</h3> <button id="audioSix">▶</button></li>
+            <li id="six"><img alt=""> <h3>Patolove</h3> <button id="audioSix">▶</button></li>
                         <audio src="audios/ZDECHŁY OSA - PATOLOVE (PROD. AETHERBOY1) [OFFICIAL MUSIC VIDEO].mp3" id="audioSixPlay"></audio>
-            <li><img src="" alt=""> <h3>Night Witches</h3> <button id="audioSeven">▶</button></li>
+            <li id="seven"><img alt=""> <h3>Night Witches</h3> <button id="audioSeven">▶</button></li>
                         <audio src="audios/SABATON - Night Witches (Official Lyric Video).mp3" id="audioSevenPlay"></audio>
-            <li><img src="" alt=""> <h3>Dancing queen</h3> <button id="audioEight">▶</button></li>
+            <li id="eight"><img alt=""> <h3>Dancing queen</h3> <button id="audioEight">▶</button></li>
                         <audio src="audios/Abba - Dancing Queen (Official Music Video Remastered).mp3" id="audioEightPlay"></audio>
-            <li><img src="" alt=""> <h3>Ostatnia nocka</h3> <button id="audioNine">▶</button></li>
+            <li id="nine"><img alt=""> <h3>Ostatnia nocka</h3> <button id="audioNine">▶</button></li>
                         <audio src="audios/Ostatnia Nocka (2014 Remastered).mp3" id="audioNinePlay"></audio>
-            <li><img src="" alt=""> <h3>Dzieciaki Atakujące Policję</h3> <button id="audioTen">▶</button></li>
+            <li id="ten"><img alt=""> <h3>Dzieciaki Atakujące Policję</h3> <button id="audioTen">▶</button></li>
                         <audio src="audios/THE ANALOGS Dzieciaki Atakujące Policję (2013) oficjalny promo klip.mp3" id="audioTenPlay"></audio>
-            <li><img src="" alt=""> <h3>Piła tango</h3> <button id="audioEleven">▶</button></li>
+            <li id="eleven"><img alt=""> <h3>Piła tango</h3> <button id="audioEleven">▶</button></li>
                         <audio src="audios/STRACHY NA LACHY - Piła tango [OFFICIAL VIDEO].mp3" id="audioElevenPlay"></audio>
-            <li><img src="" alt=""> <h3>CORALINE</h3> <button id="audioTwelve">▶</button></li>
+            <li id="twelve"><img alt=""> <h3>CORALINE</h3> <button id="audioTwelve">▶</button></li>
                         <audio src="audios/Måneskin - CORALINE (LyricsTesto).mp3" id="audioTwelvePlay"></audio>
-            <li><img src="" alt=""> <h3>Zanim pójdę</h3> <button id="audioThirteen">▶</button></li>
-                        <audio src="audios/HAPPYSAD - Zanim pójdę [OFFICIAL AUDIO].mp3" id="audioElevenThirteenPlay"></audio>
+            <li id="thirteen"><img alt=""> <h3>Zanim pójdę</h3> <button id="audioThirteen">▶</button></li>
+                        <audio src="audios/HAPPYSAD - Zanim pójdę [OFFICIAL AUDIO].mp3" id="audioThirteenPlay"></audio>
             
         </ul>
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        let audioOnePlay = document.querySelector("#audioOnePlay")
+        /* let audioOnePlay = document.querySelector("#audioOnePlay")
         let audioOne = document.querySelector("#audioOne");
         let audioTwoPlay = document.querySelector("#audioTwoPlay")
-        let audioTwo = document.querySelector("#audioTwo");
+        let audioTwo = document.querySelector("#audioTwo"); */
 
         audioOne.addEventListener("click", () =>{
             if($("#audioOne").text() == "▶"){
@@ -210,6 +210,222 @@
                     "background-color", ""
                 )
                 $("#audioFour").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioFive.addEventListener("click", () =>{
+            if($("#audioFive").text() == "▶"){
+                audioFivePlay.play();
+                $("#audioFive").text("⏸")
+                $("#five").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioFive").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioFivePlay.pause();
+                $("#audioFive").text("▶")
+                $("#five").css(
+                    "background-color", ""
+                )
+                $("#audioFive").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioSix.addEventListener("click", () =>{
+            if($("#audioSix").text() == "▶"){
+                audioSixPlay.play();
+                $("#audioSix").text("⏸")
+                $("#six").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioSix").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioSixPlay.pause();
+                $("#audioSix").text("▶")
+                $("#six").css(
+                    "background-color", ""
+                )
+                $("#audioSix").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioSeven.addEventListener("click", () =>{
+            if($("#audioSeven").text() == "▶"){
+                audioSevenPlay.play();
+                $("#audioSeven").text("⏸")
+                $("#seven").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioSeven").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioSevenPlay.pause();
+                $("#audioSeven").text("▶")
+                $("#seven").css(
+                    "background-color", ""
+                )
+                $("#audioSeven").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioEight.addEventListener("click", () =>{
+            if($("#audioEight").text() == "▶"){
+                audioEightPlay.play();
+                $("#audioEight").text("⏸")
+                $("#eight").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioEight").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioEightPlay.pause();
+                $("#audioEight").text("▶")
+                $("#eight").css(
+                    "background-color", ""
+                )
+                $("#audioEight").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioNine.addEventListener("click", () =>{
+            if($("#audioNine").text() == "▶"){
+                audioNinePlay.play();
+                $("#audioNine").text("⏸")
+                $("#nine").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioNine").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioNinePlay.pause();
+                $("#audioNine").text("▶")
+                $("#nine").css(
+                    "background-color", ""
+                )
+                $("#audioNine").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioTen.addEventListener("click", () =>{
+            if($("#audioTen").text() == "▶"){
+                audioTenPlay.play();
+                $("#audioTen").text("⏸")
+                $("#ten").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioTen").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioTenPlay.pause();
+                $("#audioTen").text("▶")
+                $("#ten").css(
+                    "background-color", ""
+                )
+                $("#audioTen").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioEleven.addEventListener("click", () =>{
+            if($("#audioEleven").text() == "▶"){
+                audioElevenPlay.play();
+                $("#audioEleven").text("⏸")
+                $("#eleven").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioEleven").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioElevenPlay.pause();
+                $("#audioEleven").text("▶")
+                $("#eleven").css(
+                    "background-color", ""
+                )
+                $("#audioEleven").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioTwelve.addEventListener("click", () =>{
+            if($("#audioTwelve").text() == "▶"){
+                audioTwelvePlay.play();
+                $("#audioTwelve").text("⏸")
+                $("#twelve").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioTwelve").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioTwelvePlay.pause();
+                $("#audioTwelve").text("▶")
+                $("#twelve").css(
+                    "background-color", ""
+                )
+                $("#audioTwelve").css({
+                    "border": "1px solid rgb(4, 81, 0)",
+                    "color": "rgb(4, 81, 0)"
+            })
+            }
+        })
+        audioThirteen.addEventListener("click", () =>{
+            if($("#audioThirteen").text() == "▶"){
+                audioThirteenPlay.play();
+                $("#audioThirteen").text("⏸")
+                $("#thirteen").css(
+                    "background-color", "rgb(4, 81, 0)"
+                )
+                $("#audioThirteen").css({
+                    "border": "1px solid black",
+                    "color": "black"
+            })
+
+            }else{
+                audioThirteenPlay.pause();
+                $("#audioThirteen").text("▶")
+                $("#thirteen").css(
+                    "background-color", ""
+                )
+                $("#audioThirteen").css({
                     "border": "1px solid rgb(4, 81, 0)",
                     "color": "rgb(4, 81, 0)"
             })

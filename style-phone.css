@@ -21,6 +21,7 @@ main{
     background-attachment: fixed;
     background-repeat: no-repeat;
     width: 25rem;
+    max-width: 99vw;
     display: grid;
     padding: 4rem 1.25rem 1.25rem 1.25rem;
     gap: 1.25rem;
